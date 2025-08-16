@@ -1,5 +1,5 @@
-[![Watch the video](https://raw.githubusercontent.com/kumarspringboot/ProductCatalog/master/thumbnail.jpg)](https://raw.githubusercontent.com/kumarspringboot/ProductCatalog/master/emplRegister.mp4)
-
+[![Watch the employee registration video](https://raw.githubusercontent.com/kumarspringboot/ProductCatalog/master/thumbnail.jpg)](https://raw.githubusercontent.com/kumarspringboot/ProductCatalog/master/emplRegister.mp4)
+[![Watch the login page video] (https://github.com/kumarspringboot/ProductCatalog/raw/refs/heads/master/loginpage.mp4)
 
 **#created emplregister.html
 #created [EmployeeEntity.java](src/main/java/com/alt/entity/EmployeeEntity.java) 
