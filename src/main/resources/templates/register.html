@@ -1,0 +1,71 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Register Product</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<form th:action="@{/register}" th:object="${product}" method="post">
+<!--    Name:<input type="text" th:field="*{name}">-->
+<!--    Brand:<input type="text" th:field="*{brand}">-->
+
+    <div class="row">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-5">
+            <h1 style="color: blue;">Register Product</h1>
+<hr>
+            <div class="mb-3 mt-4">
+                <label>Name:</label>
+                <input type="text" th:field="*{name}" required class="form-control">
+            </div>
+
+            <div class="mb-3 mt-4">
+                <label>Brand:</label>
+                <input type="text" th:field="*{brand}" required class="form-control">
+            </div>
+
+            <div class="mb-3 mt-4">
+                <label>Warrany:</label>
+                <input type="number" th:field="*{warranty}" class="form-control">
+            </div>
+
+            <div class="mb-3 mt-4">
+                <label>Prize:</label>
+                <input type="number" th:field="*{prize}" required class="form-control">
+            </div>
+
+            <div class="mb-3 mt-4">
+                <label>Quantity:</label>
+                <input type="number" th:field="*{quantity}"  required class="form-control">
+            </div>
+
+<!--            <div class="mb-3 mt-4">-->
+<!--                <label>Prize:</label>-->
+<!--                <input type="number" th:field="*{prize}" required class="form-control">-->
+<!--            </div>-->
+
+            <div class="mb-3 mt-4">
+                <label>Manufactured:</label>
+                <input type="date" th:field="*{mfd}" class="form-control">
+            </div>
+
+            <div class="mb-3 mt-4">
+                <label>Type:</label>
+                <select th:field="*{type}" class="form-control">
+                    <option value="">--select--</option>
+                    <option th:each="t:${type}" th:value="${t}" th:text="${t}"></option>
+
+                </select>
+            </div><br>
+            <div class="mb-3 mt-4">
+        <button type="submit" class="btn btn-success">Save</button>
+                <a href="/" class="btn btn-danger">Cancel</a>
+</div>
+        </div>
+    </div>
+
+</form>
+</body>
+</html>
