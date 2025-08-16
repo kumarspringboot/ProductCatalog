@@ -12,4 +12,5 @@ public void deleteEmployee(long id);
 public List<EmployeeDTO> getAllEmployees();
 public List<EmployeeDTO> getAllEmployeesByDepartment(String department);
 public EmployeeDTO getEmployee(long id);
+public EmployeeDTO getEmployeeByEmailAndPwd(String email, String pwd);
 }

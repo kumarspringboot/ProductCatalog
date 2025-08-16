@@ -58,4 +58,7 @@ public class ProductController {
         productService.updateProduct(productDTO);
         return "redirect:/list_product";
     }
+
+
+
 }

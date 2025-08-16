@@ -48,4 +48,10 @@ public class EmployeeServiceImpl implements EmployeeService {
     public EmployeeDTO getEmployee(long id) {
         return null;
     }
+
+    @Override
+    public EmployeeDTO getEmployeeByEmailAndPwd(String email, String pwd) {
+        return null;
+    }
+
 }
