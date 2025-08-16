@@ -1,0 +1,67 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Employee Registration</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<form th:action="@{/saveemployee}" th:object="${employee}" method="post">
+    <!--    Name:<input type="text" th:field="*{name}">-->
+    <!--    Brand:<input type="text" th:field="*{brand}">-->
+
+    <div class="row">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-5">
+            <h1 style="color: blue;">Employee Registration</h1>
+            <hr>
+            <div class="mb-3 mt-4">
+                <label>First Name:</label>
+                <input type="text" th:field="*{fname}" required class="form-control">
+            </div>
+
+            <div class="mb-3 mt-4">
+                <label>lname:</label>
+                <input type="text" th:field="*{lname}" required class="form-control">
+            </div>
+
+            <div class="mb-3 mt-4">
+                <label>gender:</label>
+                <input type="radio" th:field="*{gender}" value="Male" />Male
+                <input type="radio" th:field="*{gender}" value="Female" />Female
+            </div>
+
+            <div class="mb-3 mt-4">
+                <label>email:</label>
+                <input type="email" th:field="*{email}" required class="form-control">
+            </div>
+
+            <div class="mb-3 mt-4">
+                <label>password:</label>
+                <input type="password" th:field="*{password}" required class="form-control">
+            </div>
+
+            <div class="mb-3 mt-4">
+                <label>Employee Type:</label>
+                <select th:field="*{type}" class="form-control">
+                    <option value="">--select--</option>
+                    <option th:each="t:${type}" th:value="${t}" th:text="${t}"></option>
+
+                </select>
+            </div>
+            <div class="mb-3 mt-4">
+                <label>joiningDate:</label>
+                <input type="Date" th:field="*{joiningDate}" required class="form-control">
+            </div>
+
+            <br>
+            <div class="mb-3 mt-4">
+                <button type="submit" class="btn btn-success">Register</button>
+            </div>
+        </div>
+    </div>
+
+</form>
+</body>
+</html>
