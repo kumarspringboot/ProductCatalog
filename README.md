@@ -1,1 +1,4 @@
-[Watch the product registration video](https://github.com/kumarspringboot/ProductCatalog/blob/master/emplRegister.mp4)
+<video width="320" height="240" controls>
+  <source src="https://raw.githubusercontent.com/kumarspringboot/ProductCatalog/master/emplRegister.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
