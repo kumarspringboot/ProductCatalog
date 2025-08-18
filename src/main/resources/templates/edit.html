@@ -6,6 +6,10 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
+<div th:insert="navbar :: navbar"></div>
+<div class="alert alert-success">
+  <p>Welcome, <span th:text="${session.user}">User</span>!</p>
+</div>
 <form th:action="@{/update}" th:object="${product}" method="post">
   <!--    Name:<input type="text" th:field="*{name}">-->
   <!--    Brand:<input type="text" th:field="*{brand}">-->

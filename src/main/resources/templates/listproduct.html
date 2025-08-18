@@ -8,12 +8,22 @@
 
 </head>
 <body>
+<div th:insert="navbar :: navbar"></div>
+<!--<div class="alert alert-success" th:if="${msg}">-->
+<!--    <strong><div th:if="${msg}" class="alert alert-success" th:text="${msg}"></div>-->
+<!--    </strong>-->
+<!--</div>-->
+<div class="alert alert-success">
+    <p>Welcome, <span th:text="${session.user}">User</span>!</p>
+</div>
+
 <div cllass="row">
     <div class="col-md-2">
 
     </div>
     <div class="col-md-8">
     <h2>Product List</h2>
+
         <table class="table table-bordered table-stripped">
             <thread>
                 <tr>

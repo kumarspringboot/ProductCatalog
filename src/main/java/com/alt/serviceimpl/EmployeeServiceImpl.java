@@ -51,6 +51,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public EmployeeDTO getEmployeeByEmailAndPwd(String email, String pwd) {
+        employeeRepository.findByEmailAndPassword(email, pwd);
         return null;
     }
 

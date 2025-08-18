@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Product Catalog</title>
+  <!-- Bootstrap 3 CSS, no need to re-include if already in login.html -->
+</head>
+<body>
+
+<nav th:fragment="navbar" class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+              aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" th:href="@{/}">Product Catalog</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a th:href="@{/login}" th:if="${session.user == null}">Login</a></li>
+        <li><a th:href="@{/emplregister}" th:if="${session.user}">Employee Register</a></li>
+        <li><a th:href="@{/}" th:if="${session.user}">Product Register</a></li>
+        <li><a th:href="@{/logout}" th:if="${session.user}">Logout</a></li>
+
+        <!--        <li><a th:href="@{/listproduct.html}">List Products</a></li>-->
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+</body>
+</html>

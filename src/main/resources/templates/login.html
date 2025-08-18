@@ -6,9 +6,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
+<div th:insert="navbar :: navbar"></div>
 <form th:action="@{/login}" th:object="${authentication}" method="post">
     <!--    Name:<input type="text" th:field="*{name}">-->
     <!--    Brand:<input type="text" th:field="*{brand}">-->
+    <div class="alert alert-danger" th:if="${msg}">
+        <strong><div th:if="${error}" class="alert alert-danger" th:text="${error}"></div>
+        </strong>
+    </div>
 
     <div class="row">
         <div class="col-md-3">
@@ -31,9 +36,18 @@
             <div class="mb-3 mt-4">
                 <button type="submit" class="btn btn-secondary">Login</button>
             </div>
+
+
+        </div>
+
+    </div>
+    <div class="container text-center">
+        <div th:if="${error}" class="alert alert-danger alert-dismissible fade in" role="alert"
+             style="display:inline-block; text-align:left; max-width:400px;">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">&times;</button>
+            <span th:text="${error}"></span>
         </div>
     </div>
-
 </form>
 </body>
 </html>
